@@ -1,6 +1,8 @@
 <?php
 
-class MetadataScanner { 
+namespace MetadataScanner;
+
+class Scanner { 
     public $excludeDirectories = ['node_modules','build','dist','public', 'vendor','.cache', 'cache', '.git', 'tmp'];
     //public $excludeExtensions = ['docx','csv','txt','md','json','xml','lock','gif','png','jpg','jpeg','ttf','yml'];
     public $includeExtensions = ['php','js','html'];
@@ -31,7 +33,7 @@ class MetadataScanner {
     }
 
     function runCommand($command) { 
-        return  explode("\n", trim(shell_exec($command)));
+        return array_values(array_filter(explode("\n", trim(shell_exec($command)))));
     }
 
     function scan($filesOrDirectory = null) { 

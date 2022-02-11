@@ -1,0 +1,8 @@
+{
+    "name": "metadata-scanner",
+    "bin": {
+        "metadata": "bin/metadata"
+    },
+    "author": "Joshua Angnoe <joshua@fluxfx.nl>",
+    "license": "MIT"
+}

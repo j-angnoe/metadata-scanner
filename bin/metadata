@@ -1,6 +1,9 @@
+#!/usr/bin/env php
 <?php
 
 require_once __DIR__ . '/../src/MetadataScanner.php';
+
+use MetadataScanner\Scanner as MetadataScanner;
 
 class Controller { 
     const NAME = 'Metadata';
@@ -21,7 +24,7 @@ class Controller {
     }
 
     private function runCommand($command) { 
-        return  explode("\n", trim(shell_exec($command)));
+        return array_values(array_filter(explode("\n", trim(shell_exec($command)))));
     }
 
     /**
