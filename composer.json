@@ -1,0 +1,10 @@
+{
+    "name": "j-angnoe/metadata-scanner",
+    "authors": [
+        {
+            "name": "Joshua Angnoe",
+            "email": "joshua@fluxfx.nl"
+        }
+    ],
+    "require": {}
+}
